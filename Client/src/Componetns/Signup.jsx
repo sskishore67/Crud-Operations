@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import './CSS/Signup.css'
 function Signup() {
+  const [values,setvalue]=useState({
+    Firstname:"",
+    Lastname:"",
+    Email:"",
+    Password:""
+  })
+  const input=(e)=>{
+setvalue(prev(...prev({[e.target.name]:[e.target.value]})))
+  }
+  const submit=(e)=>{
+    e.preventDefault();
+  }
     return (
             <>
        {/*Navbar */}
@@ -29,22 +41,23 @@ function Signup() {
            <div className='container-fluid'>
             <div className='row  mt-5 form-bg'>
               <div className='row text-center'><h2>Signup</h2></div>
-      <div className='col-sm-3 col-md-4'></div>
-      <div className='col-sm-6 col-md-4'>
+      <div className='col-sm-3 col-md-2 col-lg-4'></div>
+      <div className='col-sm-6 col-md-6 col-lg-4'>
+        <form className='submit'>
       <div class="form-floating mb-3 mt-3">
-  <input type="text" class="form-control" id="floatingInput" />
+  <input type="text" class="form-control" id="floatingInput" onChange={input} name='Firstname' value={values.Firstname}/>
   <label for="floatingInput" className='floating-label'>FirstName</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" />
+  <input type="text" class="form-control" id="floatingInput" onChange={input} name='Lastname' value={values.Lasttname}/>
   <label for="floatingInput" className='floating-label'>LastName</label>
 </div>
       <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" />
+  <input type="email" class="form-control" id="floatingInput"onChange={input} name='Email' value={values.Email} />
   <label for="floatingInput" className='floating-label'>Email address</label>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" />
+  <input type="password" class="form-control" id="floatingPassword" onChange={input} name='password' value={values.Password}/>
   <label for="floatingPassword">Password</label>
 </div>
 <p className='row mt-3'>
@@ -54,8 +67,9 @@ function Signup() {
 </p>
 <div className='text-center'>
 <button type='button' className='btn'>Submit</button></div>
+</form>
 </div>
-<div className='col-sm-3 col-md-4'></div>
+<div className='col-sm-3 col-md-2 col-lg-4'></div>
 </div>
 </div>
             </>
