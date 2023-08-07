@@ -1,0 +1,5 @@
+.form-control:focus,.form-control:hover {
+    box-shadow: none;
+    outline: none;
+    border-color: #DEE2E6;
+}
