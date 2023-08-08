@@ -1,18 +1,33 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import './CSS/Signup.css'
+import Signupvalidation from './Validations/Signupvalidation';
+
 function Signup() {
+
+{/*Store the values form form*/}
   const [values,setvalue]=useState({
     Firstname:"",
     Lastname:"",
     Email:"",
     Password:""
   })
+
+  {/*getvalues form form and pass to values*/}
   const input=(e)=>{
-setvalue(prev(...prev({[e.target.name]:[e.target.value]})))
+setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
   }
+
+  {/*Store the error for validations*/}
+  const[errors,seterrors]=useState({});
+
+  {/*Submit the form*/}
   const submit=(e)=>{
     e.preventDefault();
+    seterrors(Signupvalidation(values));
+    if (Object.keys(validationErrors).length === 0) {
+      console.log('Form submitted successfully:', values);
+    }
   }
     return (
             <>
@@ -43,37 +58,41 @@ setvalue(prev(...prev({[e.target.name]:[e.target.value]})))
               <div className='row text-center'><h2>Signup</h2></div>
       <div className='col-sm-3 col-md-2 col-lg-4'></div>
       <div className='col-sm-6 col-md-6 col-lg-4'>
-        <form className='submit'>
+        <form onSubmit={submit}>
       <div class="form-floating mb-3 mt-3">
   <input type="text" class="form-control" id="floatingInput" onChange={input} name='Firstname' value={values.Firstname}/>
   <label for="floatingInput" className='floating-label'>FirstName</label>
+  <p className="text-danger">{errors.Firstname}</p>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" onChange={input} name='Lastname' value={values.Lasttname}/>
+  <input type="text" class="form-control" id="floatingInput" onChange={input} name='Lastname' value={values.Lastname}/>
   <label for="floatingInput" className='floating-label'>LastName</label>
+  <p className="text-danger">{errors.Lastname}</p>
 </div>
       <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput"onChange={input} name='Email' value={values.Email} />
   <label for="floatingInput" className='floating-label'>Email address</label>
+  <p className="text-danger">{errors.Email}</p>
 </div>
 <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" onChange={input} name='password' value={values.Password}/>
+  <input type="password" class="form-control" id="floatingPassword" onChange={input} name='Password' value={values.Password}/>
   <label for="floatingPassword">Password</label>
+  <p className="text-danger">{errors.Password}</p>
 </div>
 <p className='row mt-3'>
   <div className='col-2'></div>
-  <div className='col-4'>click here to login</div>
-  <div className='col-4'><Link to="/Sigin"><a>click here</a></Link></div>
+  <div className=' text-center '>
+    <div className='btn'><Link to="/Sigin">click here to login</Link></div>
+  </div>
 </p>
 <div className='text-center'>
-<button type='button' className='btn'>Submit</button></div>
+<button type='submit' className='btn'>Submit</button></div>
 </form>
 </div>
 <div className='col-sm-3 col-md-2 col-lg-4'></div>
 </div>
 </div>
-            </>
-     
+  </>
     );
 }
 export default Signup;

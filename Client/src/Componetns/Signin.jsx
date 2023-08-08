@@ -41,8 +41,9 @@ function Signup() {
 </div>
 <p className='row mt-4'>
     <div className='col-1'></div>
-  <div className='col-6'>click here to Register</div>
-  <div className='col-4'><Link to="/Sigup"><a>click here</a></Link></div>
+    <div className='text-center'>
+  <div className='btn col-5'><Link to="/Sigup">click here to register</Link></div>
+  </div>
 </p>
 <div className='text-center'>
 <button type='button' className='btn mt-2'>Submit</button></div>
