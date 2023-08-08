@@ -15,10 +15,10 @@ function Signup() {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <Link to="/Home"><a class="nav-link active" aria-current="page">Home</a></Link>
+          <Link to="/Home"className='Navlink'><a class="nav-link active" aria-current="page">Home</a></Link>
         </li>
         <li class="nav-item">
-          <Link to="/Signup"><a class="nav-link">Signup</a></Link>
+          <Link to="/Signup"className='Navlink'><a class="nav-link" >Signup</a></Link>
         </li>
       </ul>
     </div>
