@@ -42,7 +42,7 @@ function Signup() {
 <p className='row mt-4'>
     <div className='col-1'></div>
     <div className='text-center'>
-  <div className='btn col-5'><Link to="/Sigup">click here to register</Link></div>
+  <div className='btn col-5'><Link to="/Sigup" className='Navlink'>click here to register</Link></div>
   </div>
 </p>
 <div className='text-center'>

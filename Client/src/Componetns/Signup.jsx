@@ -82,7 +82,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
 <p className='row mt-3'>
   <div className='col-2'></div>
   <div className=' text-center '>
-    <div className='btn'><Link to="/Sigin">click here to login</Link></div>
+  <div className='btn'><Link to="/Sigin" className='Navlink'>click here to login</Link></div>
   </div>
 </p>
 <div className='text-center'>

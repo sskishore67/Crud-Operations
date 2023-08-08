@@ -1,4 +1,15 @@
+/* Navbar link and (Signup and signin page button) */
 .Navlink
 {
     text-decoration: none;
+}
+/* Sign in and signup page background */
+.form-bg
+{
+    background-image: linear-gradient(to left,rgb(114, 114, 119),rgb(211, 205, 205));
+    padding: 50px 0px 50px 0px;
+}
+.btn
+{
+    background-image: linear-gradient(to left,rgb(225, 225, 233),rgb(211, 205, 205));
 }
