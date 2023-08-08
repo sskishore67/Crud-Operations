@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import './CSS/Signup.css'
 import Signupvalidation from './Validations/Signupvalidation';
 
 function Signup() {
