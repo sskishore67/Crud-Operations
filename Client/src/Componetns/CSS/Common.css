@@ -11,10 +11,12 @@
     background-image: linear-gradient(to left,rgb(103, 103, 145),rgb(103, 103, 153));
     padding: 50px 0px 50px 0px;
 }
+/* Sign in and signup page btn background */
 .btn
 {
     background-image: linear-gradient(to left,rgb(225, 225, 233),rgb(211, 205, 205));
 }
+/* Sign in and signup page form background */
 .form{
 background-color: rgb(167, 163, 163);
 padding: 20px;

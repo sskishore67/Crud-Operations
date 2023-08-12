@@ -8,7 +8,9 @@ function Home() {
             <div className='container-fluid'>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">logo</a>
+  <a class="navbar-brand">
+        <img src="https://o.remove.bg/downloads/bf7c7d0c-5b91-493c-be8e-e2ae9ce2e0bd/images-removebg-preview.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"/>
+      </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,7 +28,9 @@ function Home() {
 </nav>
     </div>
     {/*content */}
-    <div><h1>Home</h1></div>
+    <div className='row mt-2'>
+      <div className='col-12 text-center'><h2>Crud Operator</h2></div>
+      </div>
             </>
     );
 }

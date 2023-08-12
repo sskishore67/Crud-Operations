@@ -34,7 +34,9 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
        <div className='container-fluid'>
   <nav class="navbar navbar-expand-lg bg-body-tertiary ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">logo</a>
+  <a class="navbar-brand">
+        <img src="https://o.remove.bg/downloads/bf7c7d0c-5b91-493c-be8e-e2ae9ce2e0bd/images-removebg-preview.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top"/>
+      </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -91,7 +93,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
       <div className='col-1'></div>
   <div className='col-md-4 col-sm-5  text-center'>
 <button type='submit' className='btn'>Submit</button></div>
-  <div className='col-md-5 col-sm-5 btn'><Link to="/Sigin" className='Navlink'>click here to login</Link></div>
+  <div className='col-sm-5 btn'><Link to="/Sigin" className='Navlink '>click here to login</Link></div>
   </div>
   </div>
 </p>
