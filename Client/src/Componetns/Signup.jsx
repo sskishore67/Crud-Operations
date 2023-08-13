@@ -57,7 +57,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
           <Link to="/Home" className='Navlink'><a class="nav-link active" aria-current="page">Home</a></Link>
         </li>
         <li class="nav-item">
-          <Link to="/Sigin" className='Navlink'><a class="nav-link">Signin</a></Link>
+          <Link to="/Signin" className='Navlink'><a class="nav-link">Signin</a></Link>
         </li>
       </ul>
     </div>
