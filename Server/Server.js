@@ -16,15 +16,15 @@ mongoose.connect(MONGO_URL, {
   dbName: 'sample', // Set the database name to 'sample'
 });
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+// db.once('open', () => {
+//   console.log('Connected to MongoDB');
+// });
 
 const FormModel = require('./Modals/FormModel'); // Adjust the path accordingly
 
-app.post('/test', async (req, res) => {
+app.post('/tests', async (req, res) => {
   try {
     const { Firstname, Lastname, Email, Password } = req.body;
     const newFormEntry = new FormModel({ Firstname, Lastname, Email, Password });

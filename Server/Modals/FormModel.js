@@ -23,5 +23,5 @@ const formSchema = new Schema({
     timestamps: true
 });
 
-const FormModel = mongoose.model("test", formSchema); // Using "test" as collection name
+const FormModel = mongoose.model("tests", formSchema); // Using "test" as collection name
 module.exports = FormModel;

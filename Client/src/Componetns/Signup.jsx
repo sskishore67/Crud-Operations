@@ -1,9 +1,10 @@
 import React, { useState,useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Signupvalidation from './Validations/Signupvalidation';
+
 import axios from 'axios';
 function Signup() {
-
+  const navigate = useNavigate();
 {/*Store the values form form*/}
   const [values,setvalue]=useState({
     Firstname:"",
@@ -30,13 +31,14 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
   };
   useEffect(() => {
     if (submitted && Object.keys(errors).length === 0) {
-      axios.post('http://localhost:8081/test', values)
+      axios.post('http://localhost:8081/tests', values)
         .then((res) => {
           alert('Registered successfully');
+          navigate("/Signin")
         })
         .catch((err) => console.log(err));
     }
-  }, [submitted, errors, values]);
+  }, [submitted, errors, values,navigate]);
     return (
             <>
        {/*Navbar */}
@@ -102,7 +104,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
       <div className='col-1'></div>
   <div className='col-md-4 col-sm-5  text-center'>
 <button type='submit' className='btn'>Submit</button></div>
-  <div className='col-sm-5 btn'><Link to="/Sigin" className='Navlink '>click here to login</Link></div>
+  <div className='col-sm-5 btn'><Link to="/Signin" className='Navlink '>click here to login</Link></div>
   </div>
   </div>
 </p>
