@@ -4,6 +4,8 @@ import Signupvalidation from './Validations/Signupvalidation';
 
 import axios from 'axios';
 function Signup() {
+  {/*used to navigate the page*/}
+  
   const navigate = useNavigate();
 {/*Store the values form form*/}
   const [values,setvalue]=useState({
@@ -21,6 +23,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
   {/*Store the error for validations*/}
   const[errors,seterrors]=useState({});
 
+ {/*Check the submit*/}
   const [submitted, setSubmitted] = useState(false);
 
   {/*Submit the form*/}
@@ -29,6 +32,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
     seterrors(Signupvalidation(values));
     setSubmitted(true); 
   };
+  {/*check the validation and post the data to the database*/}
   useEffect(() => {
     if (submitted && Object.keys(errors).length === 0) {
       axios.post('http://localhost:8081/tests', values)
