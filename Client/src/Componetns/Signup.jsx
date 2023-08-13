@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import Signupvalidation from './Validations/Signupvalidation';
-
+import axios from 'axios';
 function Signup() {
 
 {/*Store the values form form*/}
@@ -20,14 +20,12 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
   {/*Store the error for validations*/}
   const[errors,seterrors]=useState({});
 
+
   {/*Submit the form*/}
   const submit=(e)=>{
     e.preventDefault();
-    seterrors(Signupvalidation(values));
-    if (Object.keys(validationErrors).length === 0) {
-      console.log('Form submitted successfully:', values);
-    }
-  }
+    seterrors(Signupvalidation(values)); 
+  };
     return (
             <>
        {/*Navbar */}

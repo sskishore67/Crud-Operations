@@ -18,6 +18,3 @@ connectToDB()
 app.listen(process.env.PORT,() => {
   console.log("Listening to " + process.env.PORT);
 })
-app.post('/form',(req,res)=>{
-})
-
