@@ -20,12 +20,23 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
   {/*Store the error for validations*/}
   const[errors,seterrors]=useState({});
 
+  const [submitted, setSubmitted] = useState(false);
 
   {/*Submit the form*/}
   const submit=(e)=>{
     e.preventDefault();
-    seterrors(Signupvalidation(values)); 
+    seterrors(Signupvalidation(values));
+    setSubmitted(true); 
   };
+  useEffect(() => {
+    if (submitted && Object.keys(errors).length === 0) {
+      axios.post('http://localhost:8081/test', values)
+        .then((res) => {
+          alert('Registered successfully');
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [submitted, errors, values]);
     return (
             <>
        {/*Navbar */}
