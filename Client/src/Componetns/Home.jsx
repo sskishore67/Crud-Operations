@@ -28,8 +28,40 @@ function Home() {
 </nav>
     </div>
     {/*content */}
-    <div className='container-fluid row mt-2'>
-      <div className='col-12 text-center'><h2>Crud Operator</h2></div>
+    <div className='container-fluid mt-2 '>
+      <div className='row'>
+        <div className='mt-3'>
+        <button type='button' className='btn btn-success float-end'>Add User</button>
+        </div>
+      </div>
+      <div className='row overflow-auto ps-5 pe-5 mt-5'>
+        <table className='table'>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Branch</th>
+              <th>Year</th>
+              <th>Address</th>
+              <th>Mobileno</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kishore</td>
+              <td>B.Tech</td>
+              <td>Information Technology</td>
+              <td>IV</td>
+              <td>Tiruchengode</td>
+              <td>000000000</td>
+              <td><button type='button' className='btn btn-success'><i class="bi bi-pencil"></i></button></td>
+              <td><button type='button' className='btn btn-success'><i class="bi bi-trash"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       </div>
             </>
     );
