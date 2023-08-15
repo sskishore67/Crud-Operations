@@ -28,7 +28,7 @@ function Signup() {
     </div>
        {/*Form for signup */}
            <div className='container-fluid'>
-            <div className='row  mt-5 form-bg'>
+            <div className='row  form-bg'>
             
       <div className='col-2'></div>
       <div className='col-8 form'>
@@ -47,11 +47,11 @@ function Signup() {
   <input type="password" class="form-control" id="floatingPassword" />
   <label for="floatingPassword">Password</label>
 </div>
-<div className='row mt-4'>
+<div className='row mt-5'>
       <div className='col-1'></div>
   <div className='col-4 text-center'>
-<button type='button' className='btn mt-2'>Submit</button></div>
-      <div className='col-6 text-center'>
+<button type='button' className='btn '>Submit</button></div>
+      <div className='col-6 text-center pe-0 pe-sm-5 '>
   <div className='btn'><Link to="/Signup" className='Navlink'>click here to register</Link></div></div>
 </div>
 

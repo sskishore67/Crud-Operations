@@ -29,8 +29,15 @@ background-color: rgb(167, 163, 163);
 padding: 20px;
 border-radius: 10px;
 }
-.re
+/* Home page background*/
+.homebg
 {
-    background-color: whitesmoke;
+    background-color: rgb(189, 175, 175);
+    min-height: 100vh;
+    height: auto;
+}
+.t
+{
+   background: rgb(0, 255, 166) ;
 }
 

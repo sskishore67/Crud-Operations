@@ -46,7 +46,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
     return (
             <>
        {/*Navbar */}
-       <div className='container-fluid'>
+       <div className=''>
   <nav class="navbar navbar-expand-lg bg-body-tertiary ">
   <div class="container-fluid">
   <a class="navbar-brand">
@@ -70,7 +70,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
     </div>
        {/*Form for signup */}
            <div className='container-fluid '>
-            <div className='row  mt-3 form-bg'>
+            <div className='row  form-bg'>
               <div className='col-2'></div>
               <div className='col-8 form'>
               <div className='row text-center text-muted'><h2>Signup</h2></div>
