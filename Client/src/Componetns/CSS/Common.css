@@ -18,11 +18,6 @@ body,html
     height: auto;
     place-items: center;
 }
-/* Sign in and signup page btn background */
-.btn
-{
-    background-image: linear-gradient(to left,rgb(225, 225, 233),rgb(211, 205, 205));
-}
 /* Sign in and signup page form background */
 .form{
 background-color: rgb(167, 163, 163);
@@ -36,8 +31,5 @@ border-radius: 10px;
     min-height: 100vh;
     height: auto;
 }
-.t
-{
-   background: rgb(0, 255, 166) ;
-}
+
 

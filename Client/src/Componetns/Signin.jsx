@@ -52,7 +52,7 @@ function Signup() {
   <div className='col-4 text-center'>
 <button type='button' className='btn '>Submit</button></div>
       <div className='col-6 text-center pe-0 pe-sm-5 '>
-  <div className='btn'><Link to="/Signup" className='Navlink'>click here to register</Link></div></div>
+  <div className='btn btn-primary text-bg-light'><Link to="/Signup" className='Navlink'>click here to register</Link></div></div>
 </div>
 
 </div>
