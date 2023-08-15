@@ -45,7 +45,7 @@ function Home() {
               <th>Address</th>
               <th>Mobileno</th>
               <th>Edit</th>
-              <th>Delete</th>
+              <th>Deletee</th>
             </tr>
           </thead>
           <tbody>
