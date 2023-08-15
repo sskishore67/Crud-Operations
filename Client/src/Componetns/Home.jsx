@@ -31,10 +31,10 @@ function Home() {
     <div className='container-fluid mt-2 '>
       <div className='row'>
         <div className='mt-3'>
-        <button type='button' className='btn btn-success float-end'>Add User</button>
+        <button type="button" className="btn btn-primary float-end me-md-5 me-sm-0 ">Primary</button>
         </div>
       </div>
-      <div className='row overflow-auto ps-5 pe-5 mt-5'>
+      <div className='row overflow-auto ml-sm ps-md-5 pe-md-5   mt-5'>
         <table className='table'>
           <thead>
             <tr>
@@ -45,7 +45,7 @@ function Home() {
               <th>Address</th>
               <th>Mobileno</th>
               <th>Edit</th>
-              <th>Deletee</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
