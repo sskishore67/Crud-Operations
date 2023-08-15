@@ -1,3 +1,7 @@
+body,html
+{
+    height: 100%;
+}
 /*this css link in home page*/
 
 /* Navbar link and (Signup and signin page button) */
@@ -10,6 +14,9 @@
 {
     background-image: linear-gradient(to left,rgb(103, 103, 145),rgb(103, 103, 153));
     padding: 50px 0px 50px 0px;
+    min-height: 100vh;
+    height: auto;
+    place-items: center;
 }
 /* Sign in and signup page btn background */
 .btn
@@ -21,5 +28,9 @@
 background-color: rgb(167, 163, 163);
 padding: 20px;
 border-radius: 10px;
+}
+.re
+{
+    background-color: whitesmoke;
 }
 

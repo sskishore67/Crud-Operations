@@ -28,13 +28,13 @@ function Home() {
 </nav>
     </div>
     {/*content */}
-    <div className='container-fluid mt-2 '>
+    <div className='container-fluid mt-2 re '>
       <div className='row'>
         <div className='mt-3'>
-        <button type="button" className="btn btn-primary float-end me-md-5 me-sm-0 ">Primary</button>
+        <button type="button" className="btn btn-primary  float-end me-md-5 me-sm-0 ">Add New User</button>
         </div>
       </div>
-      <div className='row overflow-auto ml-sm ps-md-5 pe-md-5   mt-5'>
+      <div className='row overflow-auto ps-2 pe-2 ps-md-5 pe-md-5 mt-5'>
         <table className='table'>
           <thead>
             <tr>

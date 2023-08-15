@@ -69,9 +69,8 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
 </nav>
     </div>
        {/*Form for signup */}
-           <div className='container-fluid'>
+           <div className='container-fluid '>
             <div className='row  mt-3 form-bg'>
-            
               <div className='col-2'></div>
               <div className='col-8 form'>
               <div className='row text-center text-muted'><h2>Signup</h2></div>
