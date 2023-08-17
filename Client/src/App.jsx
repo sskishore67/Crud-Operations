@@ -5,6 +5,7 @@ import Home from './Componetns/Home';
 import Signup from './Componetns/Signup';
 import Signin from './Componetns/Signin';
 import Edit from './Componetns/Edit';
+import Newuser from './Componetns/Newuser';
 function App() {
   return (
   <>
@@ -15,6 +16,7 @@ function App() {
   <Route path='/Signup' element={<Signup />}></Route>
   <Route path='/Signin' element={<Signin />}></Route>
   <Route path='/Edit' element={<Edit />}></Route>
+  <Route path='/Newuser' element={<Newuser />}></Route>
  </Routes>
  </BrowserRouter>
   </>
