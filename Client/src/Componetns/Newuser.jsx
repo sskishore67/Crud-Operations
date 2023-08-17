@@ -2,7 +2,7 @@ import React from 'react'
 
 function Newuser() {
   return (
-    <div>Newuser</div>
+    <div className='container-fluid'></div>
   )
 }
 
