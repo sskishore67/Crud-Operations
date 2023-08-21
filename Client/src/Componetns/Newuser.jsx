@@ -15,7 +15,8 @@ function Newuser() {
 setvalues(prev=>({...prev,[e.target.name]:e.target.value}))
   }
   const submit=()=>{
-
+     e.preventDefault();
+     
   }
   return (
     <>
@@ -47,7 +48,7 @@ setvalues(prev=>({...prev,[e.target.name]:e.target.value}))
   <label for="floatingInput">Address</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" placeholder="Mobile no"  onChange={change} name='Mobileno' value={values.Mobileno}/>
+  <input type="tel" class="form-control" id="floatingInput" placeholder="Mobile no" pattern="/^([+]\d{2})?\d{10}$/" onChange={change} name='Mobileno' value={values.Mobileno}/>
   <label for="floatingInput">Mobile no</label>
 </div>
 <div className='text-center'><div className='btn btn-primary'>Submit</div> </div>
