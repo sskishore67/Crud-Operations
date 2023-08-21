@@ -10,7 +10,7 @@ import Navbar from './Navbar';
       <div className='container-fluid mt-2 homebg'>
         <div className='row'>
           <div className='mt-3'>
-          <NavLink to="/Newuser"><button  className=" btn btn-success  float-end me-md-5 me-sm-0 t">Add New User</button></NavLink>
+          <NavLink to="/Newuser"><button  className=" btn btn-success  float-end me-md-5 me-sm-0 t">Add <i class="bi bi-plus"></i></button></NavLink>
           </div>
         </div>
         <div className='row overflow-auto ps-2 pe-2 ps-md-5 pe-md-5 mt-5'>
