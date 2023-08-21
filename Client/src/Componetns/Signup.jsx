@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import Signupvalidation from './Validations/Signupvalidation';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom/dist/umd/react-router-dom.development';
+import Navbar from './Navbar';
 function Signup() {
   {/*used to navigate the page*/}
   
@@ -45,6 +46,7 @@ setvalue(prev=>({...prev,[e.target.name]:e.target.value}))
   }, [submitted, errors, values,navigate]);
     return (
             <>
+            <Navbar />
        {/*Form for signup */}
            <div className='container-fluid '>
             <div className='row  form-bg'>

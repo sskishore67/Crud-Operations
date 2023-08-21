@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom/dist/umd/react-router-dom.development';
+import Navbar from './Navbar';
 function Signup() {
     return (
             <>
+            <Navbar />
        {/*Form for signup */}
            <div className='container-fluid'>
             <div className='row  form-bg align-items-center justify-content-center'>

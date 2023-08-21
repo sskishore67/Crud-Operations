@@ -1,9 +1,11 @@
   import React from 'react';
   import './CSS/Common.css'
 import { NavLink } from 'react-router-dom/dist/umd/react-router-dom.development';
+import Navbar from './Navbar';
   function Home() {
       return (
               <>
+              <Navbar />
       {/*content */}
       <div className='container-fluid mt-2 homebg'>
         <div className='row'>
