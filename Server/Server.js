@@ -37,6 +37,21 @@ app.post('/tests', async (req, res) => {
   }
 });
 
+const NewuserModal = require('./Modals/NewuserModal'); // Adjust the path accordingly
+
+app.post('/users', async (req, res) => {
+  try {
+    const { Name,Department,Branch,Year,Address,Mobileno } = req.body;
+    const newFormEntry = new NewuserModal({Name,Department,Branch,Year,Address,Mobileno});
+    const savedFormEntry = await newFormEntry.save();
+    console.log('Form entry saved:', savedFormEntry); // Log the saved entry
+    res.json({ message: 'Form entry saved successfully' });
+  } catch (error) {
+    console.error('Error saving form entry:', error); // Log the error
+    res.status(500).json({ error: 'An error occurred' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

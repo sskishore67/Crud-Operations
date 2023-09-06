@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 function Newuser() {
+  const navigate=useNavigate();
   const[values,setvalues]=useState(
     {
     Name:"",
@@ -14,9 +17,15 @@ function Newuser() {
   const change=(e)=>{
 setvalues(prev=>({...prev,[e.target.name]:e.target.value}))
   }
-  const submit=()=>{
+  const submit=(e)=>{
      e.preventDefault();
-     
+     axios.post('http://localhost:8081/users',values)
+     .then((res)=>
+     {
+      alert("Added successfully");
+     navigate("/Home")
+    })
+     .catch((err)=>{console.log(err)});
   }
   return (
     <>
@@ -28,8 +37,8 @@ setvalues(prev=>({...prev,[e.target.name]:e.target.value}))
        <div className='col-6 justify-content-center align-item-center'>
        <form onSubmit={submit}>
        <div class="form-floating mb-3 " >
-  <input type="text" class="form-control" id="floatingInput" placeholder="Enter your name" onChange={change} name='Name' value={values.Name}/>
-  <label for="floatingInput">Enter your name</label>
+  <input type="text" class="form-control" id="floatingInput" placeholder="Name" onChange={change} name='Name' value={values.Name}/>
+  <label for="floatingInput">Name</label>
 </div>
 <div class="form-floating mb-3">
   <input type="text" class="form-control" id="floatingInput" placeholder="Department" onChange={change} name='Department' value={values.Department}/>
@@ -40,18 +49,24 @@ setvalues(prev=>({...prev,[e.target.name]:e.target.value}))
   <label for="floatingInput">Branch</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" placeholder="Year"  onChange={change} name='Year' value={values.Year}/>
-  <label for="floatingInput">Year</label>
+  <select className='form-select' id="floatingSelect"  onChange={change} name='Year' value={values.Year}>
+    <option selected>Select the Year</option>
+    <option value={1} >I</option>
+    <option value={2}>II</option>
+    <option value={3}>III</option>
+    <option value={4}>IV</option>
+  </select>
+   <label for="floatingInput">Year</label>
 </div>
 <div class="form-floating mb-3">
   <input type="text" class="form-control" id="floatingInput" placeholder="Address"  onChange={change} name='Address' value={values.Address}/>
   <label for="floatingInput">Address</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="tel" class="form-control" id="floatingInput" placeholder="Mobile no" pattern="/^([+]\d{2})?\d{10}$/" onChange={change} name='Mobileno' value={values.Mobileno}/>
+  <input type="tel" class="form-control" id="floatingInput" placeholder="Mobile no" pattern="^[789]\d{9}$" onChange={change} name='Mobileno' value={values.Mobileno}/>
   <label for="floatingInput">Mobile no</label>
 </div>
-<div className='text-center'><div className='btn btn-primary'>Submit</div> </div>
+<div className='text-center'><button className='btn btn-primary'>Add</button> </div>
 </form>
        </div>
        <div className='col-3'></div>

@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react';
 import {useNavigate} from 'react-router-dom';
 import Signupvalidation from './Validations/Signupvalidation';
 import axios from 'axios';
-import { NavLink } from 'react-router-dom/dist/umd/react-router-dom.development';
+import { NavLink } from 'react-router-dom';
 import Navbar from './Navbar';
 function Signup() {
   {/*used to navigate the page*/}
