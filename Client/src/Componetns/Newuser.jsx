@@ -34,8 +34,8 @@ setvalues(prev=>({...prev,[e.target.name]:e.target.value}))
     <div className='container-fluid homebg pt-5 pb-5'>
         <div className='row'>
           <div className='text-center mb-5'><h3 className=''>Add New User</h3></div>
-       <div className='col-3'></div>
-       <div className='col-6 justify-content-center align-item-center'>
+       <div className='col-md-3 col-1'></div>
+       <div className='col-md-6 col-10 justify-content-center align-item-center'>
        <form onSubmit={submit}>
        <div class="form-floating mb-3 " >
   <input type="text" class="form-control" id="floatingInput" placeholder="Name" onChange={change} name='Name' value={values.Name}/>
