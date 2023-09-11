@@ -1,8 +1,15 @@
-  import React from 'react';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
   import './CSS/Common.css'
-import { NavLink } from 'react-router-dom/dist/umd/react-router-dom.development';
+import { NavLink } from 'react-router-dom';
 import Navbar from './Navbar';
   function Home() {
+    const[record,setrecord]=useState([])
+    useEffect(()=>{
+  axios.get('http://localhost:8081')
+  .then(result=>console.log(result.data))
+  .catch(err=>console.log(err))
+    },[]);
       return (
               <>
               <Navbar />
@@ -28,16 +35,20 @@ import Navbar from './Navbar';
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Kishore</td>
-                <td>B.Tech</td>
-                <td>Information Technology</td>
-                <td>IV</td>
-                <td>Tiruchengode</td>
-                <td>000000000</td>
+            {record.length >0? ( 
+              record.map((user)=>{
+              return <tr>
+                <td>{user.Name}</td>
+                <td>{user.Department}</td>
+                <td>{user.Branch}</td>
+                <td>{user.Year}</td>
+                <td>{user.Address}</td>
+                <td>{user.Mobileno}</td>
                 <td><NavLink to="/Edit"><button type='button' className='btn btn-success'><i class="bi bi-pencil"></i></button></NavLink></td>
                 <td><button type='button' className='btn btn-success'><i class="bi bi-trash"></i></button></td>
               </tr>
+              })
+              ):(<tr className='bg-white '><td colspan="8">No Record Found</td></tr>)}
             </tbody>
           </table>
         </div>
