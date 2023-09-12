@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-  import './CSS/Common.css'
+import './CSS/Common.css'
 import { NavLink } from 'react-router-dom';
 import Navbar from './Navbar';
   function Home() {

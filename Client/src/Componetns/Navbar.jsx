@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom/dist/umd/react-router-dom.development';
+import { NavLink } from 'react-router-dom';
 function Navbar() {
   return (
     <>
