@@ -64,7 +64,7 @@ setvalues(prev=>({...prev,[e.target.name]:e.target.value}))
   <label for="floatingInput">Address</label>
 </div>
 <div class="form-floating mb-3">
-  <input type="tel" class="form-control" id="floatingInput" placeholder="Mobile no" pattern="^[789]\d{9}$" onChange={change} name='Mobileno' value={values.Mobileno}/>
+  <input type="tel" class="form-control" id="floatingInput" placeholder="Mobile no" inputMode='tel' pattern="^[789]\d{9}$" onChange={change} name='Mobileno' value={values.Mobileno}/>
   <label for="floatingInput">Mobile no</label>
 </div>
 <div className='text-center'><button className='btn btn-primary'>Add</button> </div>

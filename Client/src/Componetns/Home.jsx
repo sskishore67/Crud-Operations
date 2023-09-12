@@ -6,8 +6,8 @@ import Navbar from './Navbar';
   function Home() {
     const[record,setrecord]=useState([])
     useEffect(()=>{
-  axios.get('http://localhost:8081')
-  .then(result=>console.log(result.data))
+  axios.get('http://localhost:8081/users')
+  .then(result=>setrecord(result.data))
   .catch(err=>console.log(err))
     },[]);
       return (

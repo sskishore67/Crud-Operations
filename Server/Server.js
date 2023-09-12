@@ -52,6 +52,11 @@ app.post('/users', async (req, res) => {
   }
 });
 
+app.get('/users',(req,res)=>{
+  NewuserModal.find()
+  .then(users=>res.json(users))
+  .catch((err)=>res.json(err))
+})
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
