@@ -44,7 +44,7 @@ import Navbar from './Navbar';
                 <td>{user.Year}</td>
                 <td>{user.Address}</td>
                 <td>{user.Mobileno}</td>
-                <td><NavLink to="/Edit"><button type='button' className='btn btn-success'><i class="bi bi-pencil"></i></button></NavLink></td>
+                <td><NavLink to={'/Edit/${user.id'}><button type='button' className='btn btn-success'><i class="bi bi-pencil"></i></button></NavLink></td>
                 <td><button type='button' className='btn btn-success'><i class="bi bi-trash"></i></button></td>
               </tr>
               })

@@ -57,6 +57,14 @@ app.get('/users',(req,res)=>{
   .then(users=>res.json(users))
   .catch((err)=>res.json(err))
 })
+
+app.get('/users/:id',(req,res)=>{
+  const id=req.params.id;
+  NewuserModal.findById({_id})
+  .then(users=>res.json(users))
+  .catch((err)=>res.json(err))
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
