@@ -4,25 +4,12 @@ body,html
 }
 /*this css link in home page*/
 
-/* Navbar link and (Signup and signin page button) */
+/* Navbar link */
 .Navlink
 {
     text-decoration: none;
 }
-/* Sign in and signup page background */
-.form-bg
-{
-    background-image: linear-gradient(to left,rgb(103, 103, 145),rgb(103, 103, 153));
-    padding: 50px 0px 50px 0px;
-    min-height: 100vh;
-    height: auto;
-}
-/* Sign in and signup page form background */
-.form{
-background-color: rgb(167, 163, 163);
-padding: 20px;
-border-radius: 10px;
-}
+
 /* Home page background*/
 .homebg
 {
