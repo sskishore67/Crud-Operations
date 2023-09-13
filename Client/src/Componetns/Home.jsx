@@ -10,6 +10,13 @@ import Navbar from './Navbar';
   .then(result=>setrecord(result.data))
   .catch(err=>console.log(err))
     },[]);
+
+    const handleDelete=(id)=>{
+      axios.delete('http://localhost:8081/deleteUser/'+id)
+      .then((res)=>{console.log(res) 
+        window.location.reload()})
+      .catch((err)=>console.log(err))
+    }
       return (
               <>
               <Navbar />
@@ -44,8 +51,8 @@ import Navbar from './Navbar';
                 <td>{user.Year}</td>
                 <td>{user.Address}</td>
                 <td>{user.Mobileno}</td>
-                <td><NavLink to={'/Edit/${user.id'}><button type='button' className='btn btn-success'><i class="bi bi-pencil"></i></button></NavLink></td>
-                <td><button type='button' className='btn btn-success'><i class="bi bi-trash"></i></button></td>
+                <td><NavLink to={`/Edit/${user._id}`}><button type='button' className='btn btn-success'><i class="bi bi-pencil"></i></button></NavLink></td>
+                <td><button type='button' className='btn btn-success' onClick={(e)=>handleDelete(user._id)}><i class="bi bi-trash"></i></button></td>
               </tr>
               })
               ):(<tr className='bg-white '><td colspan="8">No Record Found</td></tr>)}

@@ -13,8 +13,13 @@ app.use(express.json());
 mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  dbName: 'sample', // Set the database name to 'sample'
+  dbName: 'sample',
+}).then(() => {
+  console.log('Connected to MongoDB');
+}).catch((error) => {
+  console.error('MongoDB connection error:', error);
 });
+
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
@@ -58,12 +63,27 @@ app.get('/users',(req,res)=>{
   .catch((err)=>res.json(err))
 })
 
-app.get('/users/:id',(req,res)=>{
-  const id=req.params.id;
-  NewuserModal.findById({_id})
-  .then(users=>res.json(users))
-  .catch((err)=>res.json(err))
-})
+app.get('/getUser/:id', (req, res) => {
+  const id = req.params.id;
+  NewuserModal.findById({_id:id})
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
+});
+
+app.delete('/deleteUser/:id', (req, res) => {
+  const id = req.params.id;
+  NewuserModal.findByIdAndDelete({_id:id})
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
+});
+
+app.put('/updateUser/:id', (req, res) => {
+  const id = req.params.id;
+  const { Name,Department,Branch,Year,Address,Mobileno } = req.body;
+  NewuserModal.findByIdAndUpdate({_id:id},{Name,Department,Branch,Year,Address,Mobileno})
+    .then((users) => res.json(users))
+    .catch((err) => res.json(err));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
